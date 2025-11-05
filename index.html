@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <title>Login</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#8B4513">
+<meta name="theme-color" content="#000000">
 
 <meta name="description" content=" Ganhar dinheiro impoortante demais" />
 <meta name="keywords" content="investmentos, hamister, ganhar dinheiro" />
@@ -21,25 +21,27 @@ window.addEventListener('resize', function() {
 </script>
 <link rel="stylesheet" href="all.css"/>
 <link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="css/dark-theme.css"/>
 <script type="text/javascript" src="min.js"></script>
 <script type="text/javascript" src="layer.js"></script>
 <script type="text/javascript" src="common.js"></script>
 <script type="text/javascript" src="public.js"></script>
 
 <style>
-/* Cores de café definidas */
+/* Cores em preto e branco definidas */
 :root {
-  --coffee-dark: #5D4037;
-  --coffee-medium: #8B4513;
-  --coffee-light: #A1887F;
-  --coffee-cream: #D7CCC8;
-  --coffee-lighter: #EFEBE9;
-  --coffee-accent: #6D4C41;
+  --gold-dark: #000000;
+  --gold-medium: #333333;
+  --gold-light: #666666;
+  --gold-cream: #FFFFFF;
+  --gold-lighter: #F5F5F5;
+  --gold-accent: #000000;
+  --gold-shadow: rgba(0, 0, 0, 0.2);
 }
 
 body {
-  background-color: var(--coffee-lighter);
-  background-image: url(fundoindex.jpg);
+  background-color: var(--gold-lighter);
+  background-image: linear-gradient(135deg, var(--gold-lighter) 0%, var(--gold-cream) 100%);
   background-size: 100% 260px;
   background-repeat: no-repeat;
 }
@@ -49,7 +51,8 @@ body {
   text-align: center;
   font-size: 22px;
   font-weight: 700;
-  color: var(--coffee-dark);
+  color: var(--gold-dark);
+  text-shadow: 0 1px 2px var(--gold-shadow);
 }
 
 .container .form {
@@ -57,7 +60,8 @@ body {
   top: 28px;
   border-radius: 20px 20px 0 0;
   width: 100%;
-  background-color: var(--coffee-cream);
+  background-color: var(--gold-cream);
+  box-shadow: 0 -5px 15px var(--gold-shadow);
 }
 
 .u-form-item {
@@ -65,15 +69,17 @@ body {
 }
 
 ::placeholder {
-  color: var(--coffee-light);
+  color: var(--gold-medium);
   font-size: 14px;
+  opacity: 0.7;
 }
 
 .u-form-item .u-form-item__body, #register .u-form-item .u-form-item__body {
   padding: 10px !important;
-  background: var(--coffee-lighter);
+  background: var(--gold-lighter);
   border-radius: 24px;
-  border: 1px solid var(--coffee-light);
+  border: 1px solid var(--gold-light);
+  box-shadow: inset 0 1px 3px var(--gold-shadow);
 }
 
 .u-form-item__body {
@@ -111,7 +117,8 @@ body {
   padding: 0;
   margin: 0;
   text-decoration: inherit;
-  color: var(--coffee-dark);
+  color: var(--gold-dark);
+  font-weight: 500;
 }
 
 .container .btn {
@@ -119,23 +126,31 @@ body {
   text-align: center;
   margin: 10px 30px 10px 30px;
   color: #fff;
-  background: linear-gradient(90deg, var(--coffee-medium), var(--coffee-accent)) !important;
+  background: linear-gradient(135deg, var(--gold-medium), var(--gold-accent)) !important;
   font-weight: 700;
   border-radius: 22px;
   padding: 12px 0;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  box-shadow: 0 4px 8px var(--gold-shadow);
+  transition: all 0.3s ease;
+}
+
+.container .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--gold-shadow);
 }
 
 .container .forget {
   display: block;
   text-align: center;
   font-weight: 500;
-  color: var(--coffee-medium);
+  color: var(--gold-medium);
   font-size: 14px;
   text-align: center;
   margin-bottom: 20px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 .container .form .btn-bottom {
@@ -146,17 +161,20 @@ body {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
-  color: var(--coffee-medium);
+  color: var(--gold-medium);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 .guojia-list-item {
   padding: 10px 0;
-  border-bottom: 1px var(--coffee-light) dashed;
-  color: var(--coffee-dark);
+  border-bottom: 1px var(--gold-light) dashed;
+  color: var(--gold-dark);
+  transition: all 0.2s ease;
 }
 
 .guojia-list-item:hover {
-  background-color: var(--coffee-cream);
+  background-color: var(--gold-cream);
+  color: var(--gold-accent);
 }
 
 /* Estilos adicionais para loading */
@@ -167,7 +185,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(93, 64, 55, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 9999;
   justify-content: center;
   align-items: center;
@@ -176,8 +194,8 @@ body {
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid var(--coffee-cream);
-  border-top: 5px solid var(--coffee-medium);
+  border: 5px solid var(--gold-cream);
+  border-top: 5px solid var(--gold-medium);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -189,20 +207,57 @@ body {
 
 /* Estilo para o cabeçalho fixo */
 div[style*="position:fixed"] {
-  background-color: var(--coffee-medium) !important;
+  background: linear-gradient(135deg, var(--gold-medium), var(--gold-accent)) !important;
+  box-shadow: 0 2px 10px var(--gold-shadow);
 }
 
 /* Estilo para o link de suporte */
 span[style*="color:#f73131"] a {
-  filter: sepia(100%) hue-rotate(-20deg) saturate(500%);
+  filter: brightness(0) saturate(100%) invert(76%) sepia(53%) saturate(495%) hue-rotate(3deg) brightness(97%) contrast(93%);
+}
+
+/* Adicionando efeitos dourados extras */
+.u-icon__img img {
+  filter: brightness(0) saturate(100%) invert(76%) sepia(53%) saturate(495%) hue-rotate(3deg) brightness(97%) contrast(93%);
+}
+
+.container .form .u-form-item__body__left__content__icon .u-icon {
+  color: var(--gold-medium);
+}
+
+/* Efeito de brilho nos elementos */
+.u-form-item__body {
+  transition: all 0.3s ease;
+}
+
+.u-form-item__body:focus-within {
+  box-shadow: 0 0 0 2px var(--gold-light), inset 0 1px 3px var(--gold-shadow);
+}
+
+/* Efeito de brilho no cabeçalho */
+div[style*="position:fixed"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
 }
 </style>
 </head>
 <body ontouchstart="">
 
-<div style="height:60px;"><div style="width:100%;height:59px;line-height:59px;position:fixed;top:0;left:0;z-index:999999;background-color: var(--coffee-medium);"><span style="position:absolute;right:10px;font-size:14px;color:#fff;letter-spacing:1px;"><a target="_blank" href=" https://t.me/Ada8860"><img src="https://i.postimg.cc/CLvcSTY3/icon-kefu3.png" style="width:28px;height:28px;" /></a></span></div></div>
+<div style="height:60px;"><div style="width:100%;height:59px;line-height:59px;position:fixed;top:0;left:0;z-index:999999;background: linear-gradient(135deg, var(--gold-medium), var(--gold-accent));"><span style="position:absolute;right:10px;font-size:14px;color:#fff;letter-spacing:1px;"><a target="_blank" href=" https://t.me/Ada8860"><img src="https://i.postimg.cc/CLvcSTY3/icon-kefu3.png" style="width:28px;height:28px;" /></a></span></div></div>
 
-<div style="margin-top:45px;text-align:center;"><img src="img/logo1.jpg" alt="logo" style="width:110px;height:110px;"></div>
+<div style="margin-top:45px;text-align:center;"><img src="img/logo1.jpg" alt="logo" style="width:110px;height:110px;border-radius:50%;box-shadow:0 4px 15px var(--gold-shadow);"></div>
 
 <!-- Overlay de loading -->
 <div class="loading-overlay" id="loadingOverlay">
@@ -223,7 +278,7 @@ span[style*="color:#f73131"] a {
                                         <img src="https://i.postimg.cc/8Cq1Y0jW/shoujitubiao.png" style="display:block;width: 100%; height: 100%;">
                                     </div>
                                     <input id="area_codei" name="area_code" type="text" value="244" style="display:none;" required>
-                                    <div style="width:40px;height:22px;color: var(--coffee-dark);" id="quhao" onclick="quhao_select()">+<span id="area_code">244</span></div>
+                                    <div style="width:40px;height:22px;color: var(--gold-dark);font-weight:600;" id="quhao" onclick="quhao_select()">+<span id="area_code">244</span></div>
                                 </div>
                             </div>
                         </div>
@@ -271,9 +326,9 @@ const TOKEN_EXPIRY_HOURS = 5; // Token expira em 5 horas
 function quhao_select() {
     layer.open({
         type: 1,
-        content: '<div style="padding:0 10px;background-color: var(--coffee-lighter);"><div style="height:200px;overflow-y:scroll;"><div class="guojia-list-item" onclick="qhselect(1)">(USA) +1</div><div class="guojia-list-item" onclick="qhselect(7)">(Russia) +7</div><div class="guojia-list-item" onclick="qhselect(20)">(Egypt) +20</div><div class="guojia-list-item" onclick="qhselect(27)">(South Africa) +27</div><div class="guojia-list-item" onclick="qhselect(30)">(Greece) +30</div><div class="guojia-list-item" onclick="qhselect(31)">(Netherlands) +31</div><div class="guojia-list-item" onclick="qhselect(32)">(Belgium) +32</div><div class="guojia-list-item" onclick="qhselect(33)">(France) +33</div><div class="guojia-list-item" onclick="qhselect(34)">(Spain) +34</div><div class="guojia-list-item" onclick="qhselect(39)">(Italy) +39</div><div class="guojia-list-item" onclick="qhselect(40)">(Romania) +40</div><div class="guojia-list-item" onclick="qhselect(41)">(Switzerland) +41</div><div class="guojia-list-item" onclick="qhselect(43)">(Austria) +43</div><div class="guojia-list-item" onclick="qhselect(44)">(United Kingdom) +44</div><div class="guojia-list-item" onclick="qhselect(45)">(Denmark) +45</div><div class="guojia-list-item" onclick="qhselect(46)">(Sweden) +46</div><div class="guojia-list-item" onclick="qhselect(47)">(Norway) +47</div><div class="guojia-list-item" onclick="qhselect(48)">(Poland) +48</div><div class="guojia-list-item" onclick="qhselect(49)">(Germany) +49</div><div class="guojia-list-item" onclick="qhselect(51)">(Peru) +51</div><div class="guojia-list-item" onclick="qhselect(52)">(Mexico) +52</div><div class="guojia-list-item" onclick="qhselect(53)">(Cuba) +53</div><div class="guojia-list-item" onclick="qhselect(54)">(Argentina) +54</div><div class="guojia-list-item" onclick="qhselect(55)">(Brazil) +55</div><div class="guojia-list-item" onclick="qhselect(56)">(Chile) +56</div><div class="guojia-list-item" onclick="qhselect(57)">(Colombia) +57</div><div class="guojia-list-item" onclick="qhselect(58)">(Venezuela) +58</div><div class="guojia-list-item" onclick="qhselect(60)">(Malaysia) +60</div><div class="guojia-list-item" onclick="qhselect(61)">(Australia) +61</div><div class="guojia-list-item" onclick="qhselect(62)">(Indonesia) +62</div><div class="guojia-list-item" onclick="qhselect(63)">(Philippines) +63</div><div class="guojia-list-item" onclick="qhselect(64)">(New Zealand) +64</div><div class="guojia-list-item" onclick="qhselect(65)">(Singapore) +65</div><div class="guojia-list-item" onclick="qhselect(66)">(Thailand) +66</div><div class="guojia-list-item" onclick="qhselect(81)">(Japan) +81</div><div class="guojia-list-item" onclick="qhselect(82)">(South Korea) +82</div><div class="guojia-list-item" onclick="qhselect(84)">(Vietnam) +84</div><div class="guojia-list-item" onclick="qhselect(86)">(China) +86</div><div class="guojia-list-item" onclick="qhselect(90)">(Turkey) +90</div><div class="guojia-list-item" onclick="qhselect(91)">(India) +91</div><div class="guojia-list-item" onclick="qhselect(92)">(Pakistan) +92</div><div class="guojia-list-item" onclick="qhselect(93)">(Afghanistan) +93</div><div class="guojia-list-item" onclick="qhselect(94)">(Sri Lanka) +94</div><div class="guojia-list-item" onclick="qhselect(95)">(Myanmar) +95</div><div class="guojia-list-item" onclick="qhselect(98)">(Iran) +98</div><div class="guojia-list-item" onclick="qhselect(213)">(Algeria) +213</div><div class="guojia-list-item" onclick="qhselect(216)">(Tunisia) +216</div><div class="guojia-list-item" onclick="qhselect(218)">(Libya) +218</div><div class="guojia-list-item" onclick="qhselect(220)">(Gambia) +220</div><div class="guojia-list-item" onclick="qhselect(221)">(Senegal) +221</div><div class="guojia-list-item" onclick="qhselect(222)">(Mauritania) +222</div><div class="guojia-list-item" onclick="qhselect(223)">(Mali) +223</div><div class="guojia-list-item" onclick="qhselect(224)">(Guinea) +224</div><div class="guojia-list-item" onclick="qhselect(225)">(Côte d\'Ivoire) +225</div><div class="guojia-list-item" onclick="qhselect(226)">(Burkina Faso) +226</div><div class="guojia-list-item" onclick="qhselect(227)">(Niger) +227</div><div class="guojia-list-item" onclick="qhselect(228)">(Togo) +228</div><div class="guojia-list-item" onclick="qhselect(229)">(Benin) +229</div><div class="guojia-list-item" onclick="qhselect(230)">(Mauritius) +230</div><div class="guojia-list-item" onclick="qhselect(231)">(Liberia) +231</div><div class="guojia-list-item" onclick="qhselect(232)">(Sierra Leone) +232</div><div class="guojia-list-item" onclick="qhselect(233)">(Ghana) +233</div><div class="guojia-list-item" onclick="qhselect(234)">(Nigeria) +234</div><div class="guojia-list-item" onclick="qhselect(235)">(Chad) +235</div><div class="guojia-list-item" onclick="qhselect(237)">(Cameroon) +237</div><div class="guojia-list-item" onclick="qhselect(238)">(Cape Verde) +238</div><div class="guojia-list-item" onclick="qhselect(974)">(Qatar) +974</div><div class="guojia-list-item" onclick="qhselect(994)">(Azerbaijan) +994</div></div></div>',
+        content: '<div style="padding:0 10px;background-color: var(--gold-lighter);"><div style="height:200px;overflow-y:scroll;"><div class="guojia-list-item" onclick="qhselect(1)">(USA) +1</div><div class="guojia-list-item" onclick="qhselect(7)">(Russia) +7</div><div class="guojia-list-item" onclick="qhselect(20)">(Egypt) +20</div><div class="guojia-list-item" onclick="qhselect(27)">(South Africa) +27</div><div class="guojia-list-item" onclick="qhselect(30)">(Greece) +30</div><div class="guojia-list-item" onclick="qhselect(31)">(Netherlands) +31</div><div class="guojia-list-item" onclick="qhselect(32)">(Belgium) +32</div><div class="guojia-list-item" onclick="qhselect(33)">(France) +33</div><div class="guojia-list-item" onclick="qhselect(34)">(Spain) +34</div><div class="guojia-list-item" onclick="qhselect(39)">(Italy) +39</div><div class="guojia-list-item" onclick="qhselect(40)">(Romania) +40</div><div class="guojia-list-item" onclick="qhselect(41)">(Switzerland) +41</div><div class="guojia-list-item" onclick="qhselect(43)">(Austria) +43</div><div class="guojia-list-item" onclick="qhselect(44)">(United Kingdom) +44</div><div class="guojia-list-item" onclick="qhselect(45)">(Denmark) +45</div><div class="guojia-list-item" onclick="qhselect(46)">(Sweden) +46</div><div class="guojia-list-item" onclick="qhselect(47)">(Norway) +47</div><div class="guojia-list-item" onclick="qhselect(48)">(Poland) +48</div><div class="guojia-list-item" onclick="qhselect(49)">(Germany) +49</div><div class="guojia-list-item" onclick="qhselect(51)">(Peru) +51</div><div class="guojia-list-item" onclick="qhselect(52)">(Mexico) +52</div><div class="guojia-list-item" onclick="qhselect(53)">(Cuba) +53</div><div class="guojia-list-item" onclick="qhselect(54)">(Argentina) +54</div><div class="guojia-list-item" onclick="qhselect(55)">(Brazil) +55</div><div class="guojia-list-item" onclick="qhselect(56)">(Chile) +56</div><div class="guojia-list-item" onclick="qhselect(57)">(Colombia) +57</div><div class="guojia-list-item" onclick="qhselect(58)">(Venezuela) +58</div><div class="guojia-list-item" onclick="qhselect(60)">(Malaysia) +60</div><div class="guojia-list-item" onclick="qhselect(61)">(Australia) +61</div><div class="guojia-list-item" onclick="qhselect(62)">(Indonesia) +62</div><div class="guojia-list-item" onclick="qhselect(63)">(Philippines) +63</div><div class="guojia-list-item" onclick="qhselect(64)">(New Zealand) +64</div><div class="guojia-list-item" onclick="qhselect(65)">(Singapore) +65</div><div class="guojia-list-item" onclick="qhselect(66)">(Thailand) +66</div><div class="guojia-list-item" onclick="qhselect(81)">(Japan) +81</div><div class="guojia-list-item" onclick="qhselect(82)">(South Korea) +82</div><div class="guojia-list-item" onclick="qhselect(84)">(Vietnam) +84</div><div class="guojia-list-item" onclick="qhselect(86)">(China) +86</div><div class="guojia-list-item" onclick="qhselect(90)">(Turkey) +90</div><div class="guojia-list-item" onclick="qhselect(91)">(India) +91</div><div class="guojia-list-item" onclick="qhselect(92)">(Pakistan) +92</div><div class="guojia-list-item" onclick="qhselect(93)">(Afghanistan) +93</div><div class="guojia-list-item" onclick="qhselect(94)">(Sri Lanka) +94</div><div class="guojia-list-item" onclick="qhselect(95)">(Myanmar) +95</div><div class="guojia-list-item" onclick="qhselect(98)">(Iran) +98</div><div class="guojia-list-item" onclick="qhselect(213)">(Algeria) +213</div><div class="guojia-list-item" onclick="qhselect(216)">(Tunisia) +216</div><div class="guojia-list-item" onclick="qhselect(218)">(Libya) +218</div><div class="guojia-list-item" onclick="qhselect(220)">(Gambia) +220</div><div class="guojia-list-item" onclick="qhselect(221)">(Senegal) +221</div><div class="guojia-list-item" onclick="qhselect(222)">(Mauritania) +222</div><div class="guojia-list-item" onclick="qhselect(223)">(Mali) +223</div><div class="guojia-list-item" onclick="qhselect(224)">(Guinea) +224</div><div class="guojia-list-item" onclick="qhselect(225)">(Côte d\'Ivoire) +225</div><div class="guojia-list-item" onclick="qhselect(226)">(Burkina Faso) +226</div><div class="guojia-list-item" onclick="qhselect(227)">(Niger) +227</div><div class="guojia-list-item" onclick="qhselect(228)">(Togo) +228</div><div class="guojia-list-item" onclick="qhselect(229)">(Benin) +229</div><div class="guojia-list-item" onclick="qhselect(230)">(Mauritius) +230</div><div class="guojia-list-item" onclick="qhselect(231)">(Liberia) +231</div><div class="guojia-list-item" onclick="qhselect(232)">(Sierra Leone) +232</div><div class="guojia-list-item" onclick="qhselect(233)">(Ghana) +233</div><div class="guojia-list-item" onclick="qhselect(234)">(Nigeria) +234</div><div class="guojia-list-item" onclick="qhselect(235)">(Chad) +235</div><div class="guojia-list-item" onclick="qhselect(237)">(Cameroon) +237</div><div class="guojia-list-item" onclick="qhselect(238)">(Cape Verde) +238</div><div class="guojia-list-item" onclick="qhselect(974)">(Qatar) +974</div><div class="guojia-list-item" onclick="qhselect(994)">(Azerbaijan) +994</div></div></div>',
         anim: 'up',
-        style: 'position:fixed; bottom:0; left:0; width: 100%; height: 200px; padding:10px 0; border:none; background-color: var(--coffee-lighter);'
+        style: 'position:fixed; bottom:0; left:0; width: 100%; height: 200px; padding:10px 0; border:none; background-color: var(--gold-lighter); box-shadow: 0 -5px 15px var(--gold-shadow);'
     });
 }
 
@@ -299,14 +354,14 @@ function showLoading(show) {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(93, 64, 55, 0.7);
+            background: rgba(0, 0, 0, 0.7);
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 9999;
         `;
         overlay.innerHTML = `
-            <div style="background: var(--coffee-cream); padding: 20px; border-radius: 8px; color: var(--coffee-dark);">
+            <div style="background: var(--gold-cream); padding: 20px; border-radius: 8px; color: var(--gold-dark); box-shadow: 0 4px 15px var(--gold-shadow);">
                 <p>Carregando...</p>
             </div>
         `;

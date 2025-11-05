@@ -10,15 +10,15 @@
     <meta name="360-fullscreen" content="true">
     <meta name="renderer" content="webkit">
     <style>
-        /* Cores de café definidas */
+        /* Tema preto e branco */
         :root {
-            --coffee-dark: #5D4037;
-            --coffee-medium: #8B4513;
-            --coffee-light: #A1887F;
-            --coffee-cream: #D7CCC8;
-            --coffee-lighter: #EFEBE9;
-            --coffee-accent: #6D4C41;
-            --coffee-gradient: linear-gradient(90deg, var(--coffee-medium), var(--coffee-accent));
+            --coffee-dark: #000000;
+            --coffee-medium: #333333;
+            --coffee-light: #666666;
+            --coffee-cream: #FFFFFF;
+            --coffee-lighter: #F5F5F5;
+            --coffee-accent: #000000;
+            --coffee-gradient: linear-gradient(90deg, #000000, #333333);
         }
 
         * {
@@ -171,9 +171,9 @@
         }
 
         @keyframes coffee-pulse {
-            0% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(139, 69, 19, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
         }
 
         #checkin-status {
@@ -213,7 +213,7 @@
         }
 
         .carousel__slide__overlay {
-            background-color: rgba(93, 64, 55, 0.3);
+            background-color: rgba(0, 0, 0, 0.3);
         }
 
         /* Texto do cabeçalho em branco */
@@ -232,6 +232,7 @@
     <link href="vant.d14f5539.css" rel="stylesheet">
     <link href="vendors.794edbf9.css" rel="stylesheet">
     <link href="app.c1933b14.css" rel="stylesheet">
+<link href="css/dark-theme.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="chunk-57673b88.2a470e9d.css">
     <link rel="stylesheet" type="text/css" href="chunk-5576a184.9f52f39a.css">
     <link rel="stylesheet" type="text/css" href="chunk-3b94db02.5929650c.css">
@@ -369,7 +370,7 @@
                     <div data-v-a53c4a36="" class="myName"><img data-v-a53c4a36=""
                                                                 src="img/logo1.jpg"
                                                                 alt=""></div>
-                    <div data-v-a53c4a36="" class="name tac" style="color: white !important;"> Blommer</div>
+                    <div data-v-a53c4a36="" class="name tac" style="color: white !important;"> Ironpeak Industries</div>
                     <div data-v-a53c4a36="" class="flex1"></div>
                     <div data-v-a53c4a36="" class="lang"><img data-v-a53c4a36=""
                                                               src="https://i.postimg.cc/P5T4C7Tm/b9839d010ab7f254febe57fd0398f0ad.png"
@@ -461,7 +462,7 @@
                         <div data-v-98526a88="" data-v-6e534c71="" class="flex1">
                             <div data-v-98526a88="" role="alert" class="van-notice-bar" data-v-6e534c71=""
                                  style="color: var(--coffee-dark); background: none;">
-                                <marquee behavior="" direction="">Olá amigos da Blommer, bem-vindos ao registro em nossa plataforma!
+                                <marquee behavior="" direction="">Olá amigos da Ironpeak Industries, bem-vindos ao registro em nossa plataforma!
                                     Nossa plataforma é um projeto de ganhos permanente e seguro!</marquee>
                             </div>
                         </div>
@@ -472,7 +473,7 @@
                         <li data-v-98526a88="" data-v-6e534c71=""
                             onclick="window.location.href='/deposito.html'">
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
-                                                                            src="https://i.postimg.cc/cHp709Ft/image.png"
+                                                                            src="img/recarregar.png"
                                                                             alt="">
                                 <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Recarregar</p></div>
                         </li>
@@ -480,7 +481,7 @@
 <li data-v-98526a88="" data-v-6e534c71="" id="checkin-btn" style="position: relative;">
     <div data-v-98526a88="" data-v-6e534c71="">
         <img data-v-98526a88="" data-v-6e534c71=""
-            src="https://i.postimg.cc/T30cgc3B/a0486a1340083788d4db56d97ee8acee.png"
+            src="img/tesouro.png"
             alt="Check-in">
         <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Check-in</p>
         <div id="checkin-status" style="
@@ -501,21 +502,21 @@
                         <li data-v-98526a88="" data-v-6e534c71=""
                             onclick="window.location.href='/retirada.html'">
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
-                                                                            src="https://i.postimg.cc/kMSFfC5Q/f5ff996fe84131803e14f18a009d87b6.png"
+                                                                            src="img/retirar.png"
                                                                             alt="">
                                 <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Retirar</p></div>
                         </li>
 
                         <li data-v-98526a88="" data-v-6e534c71="" onclick="window.location.href='produtos.html'">
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
-                                                                            src="https://aitech360.site/public/57125d1902de26bd24015093ac5a3e5d.png"
+                                                                            src="img/produtos.png"
                                                                             alt="">
                                 <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Produtos</p></div>
                         </li>
 
                         <li data-v-98526a88="" data-v-6e534c71="" onclick="window.location.href='/produtos.html'">
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
-                                                                            src="https://i.postimg.cc/JzrNrB5x/22e6a62610c270223a22ffc10e9515e7.png"
+                                                                            src="img/codigopresente.png"
                                                                             alt="">
                                 <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Código de presente</p></div>
                         </li>
@@ -523,7 +524,7 @@
                         <li data-v-98526a88="" data-v-6e534c71=""
                             onclick="window.location.href='/tarefa.html'">
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
-                                                                            src="https://i.postimg.cc/Njd15fNc/ff7e05e7e4e86beace60c23c9852c228.png"
+                                                                            src="img/produtos.png"
                                                                             alt="">
                                 <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Ganhos recebidos</p></div>
                         </li>
@@ -539,7 +540,7 @@
 
                         <li data-v-98526a88="" data-v-6e534c71="" onclick="window.location.href='https://t.me/+I_ZCdcMWo2AwOTk0'">
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
-                                                                            src="https://i.postimg.cc/P5T4C7Tm/b9839d010ab7f254febe57fd0398f0ad.png"
+                                                                            src="img/ajuda.png"
                                                                             alt="">
                                 <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Central de ajuda</p></div>
                         </li>
@@ -552,7 +553,7 @@
                     <div data-v-98526a88="" data-v-6e534c71="">
                         <div data-v-98526a88="" data-v-6e534c71="" class="item"><img data-v-98526a88=""
                                                                                      data-v-6e534c71=""
-                                                                                     src="https://i.postimg.cc/dt6jbBcn/file.png"
+                                                                                     src="img/amigos.jfif"
                                                                                      alt=""></div>
                     </div>
                 </div>
@@ -581,11 +582,11 @@
             </p>
             
             <p>
-               4: Invista em produtos Blommer e ganhe retornos diários realizandos tarefas a cada dia.
+               4: Invista em produtos Ironpeak Industries e ganhe retornos diários realizandos tarefas a cada dia.
             </p>
             <p>
               
-               5: Convide amigos para investir na Blommer e ganhe até 31% de comissão e recompensas por indicação.
+               5: Convide amigos para investir na Ironpeak Industries e ganhe até 31% de comissão e recompensas por indicação.
             </p>
         </div>
 
@@ -629,7 +630,7 @@
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(93, 64, 55, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -694,27 +695,27 @@ function closePopup() {
     <div data-v-47e63dc4="" data-v-98526a88="" class="footers" data-v-6e534c71="">
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/principal.html'">
             <div data-v-47e63dc4="" class="on"><img data-v-47e63dc4=""
-                                                    src="https://i.postimg.cc/kGXBKWYX/image.png"
-                                                    alt=""><span data-v-47e63dc4="" style="color: white !important;"> Lar </span></div>
+                                                    src="img/lar.png"
+                                                    alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;"> Lar </span></div>
         </div>
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/tarefa.html'">
             <div data-v-47e63dc4="" class=""><img data-v-47e63dc4=""
-                                                  src="https://i.postimg.cc/024bKMYP/image.png"
-                                                  alt=""><span data-v-47e63dc4="" style="color: white !important;"> Meus ganhos </span></div>
+                                                  src="img/ganho.png"
+                                                  alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;"> Meus ganhos </span></div>
         </div>
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/produtos.html'">
-            <div data-v-47e63dc4="" class=""><img data-v-47e63dc4="" src="img/footer3.jpg"
-                                                  alt=""><span data-v-47e63dc4="" style="color: white !important;">Plano Café </span></div>
+            <div data-v-47e63dc4="" class=""><img data-v-47e63dc4="" src="img/produtos.png"
+                                                  alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;">Plano Dourado </span></div>
         </div>
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/equipe.html'">
             <div data-v-47e63dc4="" class=""><img data-v-47e63dc4=""
-                                                  src="https://i.postimg.cc/sxNDWqZw/image.png"
-                                                  alt=""><span data-v-47e63dc4="" style="color: white !important;"> Equipe </span></div>
+                                                  src="img/equipe.png"
+                                                  alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;"> Equipe </span></div>
         </div>
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/dashboard.html'">
             <div data-v-47e63dc4="" class=""><img data-v-47e63dc4=""
-                                                  src="https://i.postimg.cc/Y2nSTGyY/image.png"
-                                                  alt=""><span data-v-47e63dc4="" style="color: white !important;"> Meu </span></div>
+                                                  src="img/meu.png"
+                                                  alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;"> Meu </span></div>
         </div>
     </div>
 </div>

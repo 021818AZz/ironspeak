@@ -2,11 +2,27 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
-    <title>Minha Equipe</title>
+    <title>Minha Equipe - Dourado</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
+        :root {
+            --gold-light: #FFD700;
+            --gold-medium: #D4AF37;
+            --gold-dark: #B8860B;
+            --gold-darker: #8B6914;
+            --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+            --gold-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            --gold-glow: 0 0 10px rgba(255, 215, 0, 0.5);
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --text-contrast: #000000;
+            --bg-dark: #1a1a1a;
+            --bg-medium: #2a2a2a;
+            --bg-light: #3a3a3a;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -17,10 +33,11 @@
         html, body {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             overflow-x: hidden;
-            color: #fff;
+            color: var(--text-light);
+            line-height: 1.5;
         }
         
         .container {
@@ -30,15 +47,15 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #6d4c41 0%, #8d6e63 100%);
-            color: white;
+            background: var(--gold-gradient);
+            color: var(--text-contrast);
             padding: 20px 15px;
             border-radius: 16px;
             margin-bottom: 20px;
             position: relative;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            box-shadow: var(--gold-shadow);
             overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
         }
         
         .header::before {
@@ -57,7 +74,7 @@
             top: 50%;
             left: 15px;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.3);
             padding: 10px;
             border-radius: 50%;
             width: 42px;
@@ -70,11 +87,11 @@
             cursor: pointer;
             z-index: 2;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255,255,255,0.4);
         }
         
         .back-btn:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.4);
             transform: translateY(-50%) scale(1.05);
         }
         
@@ -86,6 +103,8 @@
             position: relative;
             z-index: 1;
             letter-spacing: 0.5px;
+            color: var(--text-contrast);
+            text-shadow: 0 1px 2px rgba(255,255,255,0.5);
         }
         
         .stats-grid {
@@ -96,12 +115,12 @@
         }
         
         .stat-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--bg-medium);
             padding: 18px 12px;
             border-radius: 16px;
             text-align: center;
             box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             transition: all 0.3s ease;
@@ -132,7 +151,7 @@
         .stat-number {
             font-size: 20px;
             font-weight: 800;
-            color: #d7ccc8;
+            color: var(--gold-light);
             margin-bottom: 6px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
@@ -145,20 +164,20 @@
         }
         
         .tab-container {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--bg-medium);
             border-radius: 16px;
             margin-bottom: 20px;
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
         
         .tabs {
             display: flex;
             background: rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
         
         .tab {
@@ -174,8 +193,8 @@
         }
         
         .tab.active {
-            border-bottom-color: #d7ccc8;
-            color: #fff;
+            border-bottom-color: var(--gold-medium);
+            color: var(--text-light);
             background: rgba(255, 255, 255, 0.1);
             font-weight: 600;
         }
@@ -203,8 +222,8 @@
             background: rgba(255, 255, 255, 0.05);
             padding: 20px;
             margin: 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            border-left: 4px solid #8d6e63;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            border-left: 4px solid var(--gold-medium);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -238,7 +257,7 @@
         
         .member-phone {
             font-weight: 600;
-            color: #fff;
+            color: var(--text-light);
             font-size: 16px;
             letter-spacing: 0.3px;
         }
@@ -259,7 +278,7 @@
             padding: 14px 10px;
             border-radius: 12px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(212, 175, 55, 0.1);
             transition: all 0.3s ease;
         }
         
@@ -270,7 +289,7 @@
         
         .stat-value {
             font-weight: 700;
-            color: #d7ccc8;
+            color: var(--gold-light);
             font-size: 14px;
             margin-top: 4px;
             text-shadow: 0 1px 2px rgba(0,0,0,0.2);
@@ -310,15 +329,15 @@
         }
         
         .bonus-badge {
-            background: linear-gradient(135deg, #4caf50, #66bb6a);
-            color: white;
+            background: var(--gold-gradient);
+            color: var(--text-contrast);
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 600;
             margin-top: 14px;
             display: inline-block;
-            box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
+            box-shadow: var(--gold-shadow);
         }
         
         /* Melhorias para scroll */
@@ -331,12 +350,12 @@
         }
         
         .members-list::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(212, 175, 55, 0.3);
             border-radius: 4px;
         }
         
         .members-list::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(212, 175, 55, 0.5);
         }
         
         /* Animações */
@@ -397,6 +416,61 @@
                 font-size: 16px !important;
             }
         }
+
+        /* Melhorias de legibilidade */
+        .stat-label, .tab, .member-date, .stat-item div:first-child, .empty-state, .loading {
+            font-weight: 500;
+        }
+
+        .stat-number, .member-phone, .stat-value, .bonus-badge {
+            font-weight: 600;
+        }
+
+        .header-title {
+            font-weight: 700;
+        }
+
+        /* Melhorias de contraste */
+        .stat-card, .tab-container, .member-card {
+            color: var(--text-light);
+        }
+
+        .header, .bonus-badge {
+            color: var(--text-contrast);
+        }
+
+        /* Ajustes de tamanho de fonte para melhor legibilidade */
+        .stat-number {
+            font-size: 20px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+        }
+
+        .member-phone {
+            font-size: 16px;
+        }
+
+        .member-date {
+            font-size: 13px;
+        }
+
+        .stat-value {
+            font-size: 14px;
+        }
+
+        .stat-item div:first-child {
+            font-size: 12px;
+        }
+
+        .tab {
+            font-size: 14px;
+        }
+
+        .header-title {
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -404,9 +478,11 @@
     <!-- Cabeçalho -->
     <div class="header">
         <div class="back-btn" onclick="window.history.back()">
-            <img src="https://i.postimg.cc/CxzSVgWm/back.png" alt="Voltar" width="20" height="20">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </div>
-        <div class="header-title">Minha Equipe</div>
+        <div class="header-title">Minha Equipe Dourada</div>
     </div>
 
     <!-- Estatísticas Gerais -->

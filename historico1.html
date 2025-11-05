@@ -2,7 +2,7 @@
 <html lang="pt" style="font-size: 16px;">
 <head>
     <meta charset="utf-8">
-    <title>Histórico de Depósitos - Blommer Coffee</title>
+    <title>Histórico de Depósitos - Ironpeak Industries</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
     <style>
         * {
@@ -14,9 +14,9 @@
 
         html, body {
             width: 100%;
-            background-color: #f5f1eb;
+            background-color: #000;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: #5c3a21;
+            color: #000000;
         }
 
         .container {
@@ -27,7 +27,7 @@
 
         .head {
             padding: 10px 0;
-            background: #8B4513;
+            background: var(--coffee-medium);
             color: white;
             position: sticky;
             top: 0;
@@ -78,7 +78,7 @@
 
         /* Estilos para itens de depósito */
         .deposit-item {
-            background: white;
+            background: #000;
             border-radius: 12px;
             padding: 18px;
             margin-bottom: 12px;
@@ -101,7 +101,7 @@
             top: 0;
             height: 100%;
             width: 4px;
-            background: #8B4513;
+            background: var(--coffee-medium);
             opacity: 0.7;
         }
 
@@ -167,7 +167,7 @@
         }
 
         .detail-value {
-            color: #5c3a21;
+            color: #000000;
             font-weight: 500;
             text-align: right;
         }
@@ -210,7 +210,7 @@
 
         .filter-tabs {
             display: flex;
-            background: white;
+            background: #000;
             border-radius: 10px;
             padding: 4px;
             margin: 15px 0;
@@ -231,13 +231,13 @@
         }
 
         .filter-tab.active {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            background: linear-gradient(135deg, var(--coffee-medium) 0%, var(--coffee-accent) 100%);
             color: white;
             box-shadow: 0 2px 6px rgba(139, 69, 19, 0.2);
         }
 
         .summary-card {
-            background: white;
+            background: #000;
             border-radius: 12px;
             padding: 20px;
             margin: 15px 0;
@@ -259,7 +259,7 @@
         .stat-value {
             font-size: 18px;
             font-weight: bold;
-            color: #8B4513;
+            color: var(--coffee-medium);
             margin-bottom: 5px;
         }
 
@@ -280,12 +280,12 @@
         }
 
         .receipt-preview:hover {
-            border-color: #8B4513;
+            border-color: var(--coffee-medium);
             transform: scale(1.02);
         }
 
         .view-receipt {
-            color: #8B4513;
+            color: var(--coffee-medium);
             text-decoration: none;
             font-size: 13px;
             font-weight: 600;
@@ -295,7 +295,7 @@
         }
 
         .view-receipt:hover {
-            color: #A0522D;
+            color: var(--coffee-accent);
         }
 
         .modal-overlay {
@@ -321,7 +321,7 @@
         }
 
         .modal-content {
-            background: white;
+            background: #000;
             border-radius: 12px;
             max-width: 90%;
             max-height: 90%;

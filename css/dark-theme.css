@@ -1,0 +1,101 @@
+/* Tema escuro global */
+/* Tema global baseado no estilo de `equipe.html` */
+:root {
+    --gold-light: #FFD700;
+    --gold-medium: #D4AF37;
+    --gold-dark: #B8860B;
+    --gold-darker: #8B6914;
+    --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
+    --gold-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    --gold-glow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Fundo base e texto branco (aplica o tema do equipe.html) */
+body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%) !important;
+    color: #ffffff !important;
+}
+
+/* Forçar que elementos que antes tinham fundo claro usem o fundo escuro e texto branco */
+[style*="background: white"],
+[style*="background-color: white"],
+[style*="background: #fff"],
+[style*="background: #ffffff"],
+[style*="background-color: #fff"],
+[style*="background-color: #ffffff"] {
+    background: transparent !important;
+    color: #ffffff !important;
+}
+
+/* Headers, footers e elementos primários usam o gradiente dourado */
+header,
+footer,
+.headers,
+.footers,
+.tab,
+.btn2,
+.level-badge,
+.url-container,
+.ico {
+    background: var(--gold-gradient) !important;
+    color: #ffffff !important;
+    box-shadow: var(--gold-shadow) !important;
+}
+
+/* Componentes internos neutros em tom escuro para contraste */
+.van-card,
+.van-cell,
+.van-nav-bar,
+.van-tabbar-item--active,
+.van-grid-item__content,
+.van-popup,
+.van-search,
+.van-collapse-item__content,
+.van-coupon,
+.van-tag--plain,
+.van-notice-bar,
+.van-goods-action-icon,
+.itemBox,
+.withdrawal-form,
+.modal,
+.modal-content,
+.popover,
+.dropdown-menu,
+.content-container {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-color: rgba(212,175,55,0.08) !important;
+}
+
+/* Inputs e botões */
+input,
+select,
+textarea,
+button,
+.btn {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: rgba(212,175,55,0.12) !important;
+}
+
+button:hover,
+.btn:hover,
+.btn2:hover {
+    transform: translateY(-2px);
+}
+
+/* Links em destaque com tom dourado */
+a {
+    color: var(--gold-medium) !important;
+}
+
+a:hover {
+    color: var(--gold-light) !important;
+}
+
+/* Classes utilitárias de destaque em dourado */
+.gold-text { color: var(--gold-light) !important; }
+.gold-glow { box-shadow: var(--gold-glow) !important; }
+
+/* Garantir contraste nas listas e badges */
+.db .s, .num { color: var(--gold-light) !important; }

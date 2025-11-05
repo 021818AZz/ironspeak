@@ -5665,3 +5665,40 @@ a {
     box-sizing: border-box;
     border: 0
 }
+
+/* Dark overrides - force white/very light backgrounds to black and text to white
+   Appended to implement user request: all white/light backgrounds => black; text => white.
+   Uses !important intentionally to override vendor/inline styles. */
+html,body,.app,
+.am-loading.page,.am-page-result,.am-agreement,.am-process,.am-textarea,
+.am-filter,.am-member-manage,.am-horizon-swiper,.am-footer,.am-article,
+.am-edit-inpage,.am-page,.am-modal,.am-card{
+    background-color: #000 !important;
+    background: none !important;
+    color: #fff !important;
+}
+
+/* Links and accents */
+a{ color: #FFD966 !important; }
+
+/* Form controls */
+input,textarea,select,button{ background-color: #111 !important; color: #fff !important; border-color: #333 !important; }
+
+/* Images should not get forced background; keep transparent background */
+img{ background-color: transparent !important; }
+
+/* Attribute selectors to catch inline style="background: white" and common white hex codes */
+[style*="background: white"], [style*="background: #fff"], [style*="background:#fff"],
+[style*="background-color: white"], [style*="background-color: #fff"],
+[style*="#ffffff"], [style*="#fff"]{
+    background: none !important;
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* Buttons that were light */
+.btn,button,input[type=button],input[type=submit]{ background-color: #222 !important; color: #fff !important; }
+
+/* small adjustments for borders and separators */
+hr, .separator, .divider{ border-color: #222 !important; background-color: #222 !important; }
+
